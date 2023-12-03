@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".implicitIntent">
+
+    <Button
+        android:id="@+id/openWebPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="90dp"
+        android:text="openWebPage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/openPhoneCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="28dp"
+        android:text="openPhoneCall"
+        app:layout_constraintStart_toStartOf="@+id/openWebPage"
+        app:layout_constraintTop_toBottomOf="@+id/openWebPage" />
+
+    <Button
+        android:id="@+id/openCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="40dp"
+        android:text="openCamera"
+        app:layout_constraintStart_toStartOf="@+id/openPhoneCall"
+        app:layout_constraintTop_toBottomOf="@+id/openPhoneCall" />
+
+    <EditText
+        android:id="@+id/fillText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter a text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openCamera" />
+
+    <Button
+        android:id="@+id/textShareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83dp"
+        android:text="textShareButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fillText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
