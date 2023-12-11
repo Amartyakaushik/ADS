@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GoogleAuthenticationActivity">
+
+
+    <LinearLayout
+        android:id="@+id/Box1"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@color/Blue"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/Box2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/edit_text_shape"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Group01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TextWelcome"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/kurale"
+                android:text="Welcome"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="@id/Group01"
+                app:layout_constraintStart_toStartOf="@id/Group01"
+                app:layout_constraintTop_toTopOf="@id/Group01" />
+
+            <EditText
+                android:id="@+id/TextUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/hintColor"
+                android:padding="16sp"
+                android:hint="Email id"
+                app:layout_constraintEnd_toEndOf="@+id/TextWelcome"
+                app:layout_constraintStart_toStartOf="@+id/TextWelcome"
+                app:layout_constraintTop_toBottomOf="@+id/TextWelcome" />
+
+<!--                android:background="@drawable/edit_text_shape"-->
+            <EditText
+                android:id="@+id/TextPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/hintColor"
+                android:padding="16sp"
+                android:hint="Password"
+                app:layout_constraintEnd_toEndOf="@+id/TextUsername"
+                app:layout_constraintStart_toStartOf="@+id/TextUsername"
+                app:layout_constraintTop_toBottomOf="@+id/TextUsername" />
+
+<!--                android:background="@drawable/edit_text_shape"-->
+            <Button
+                android:id="@+id/SignUpButton02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/TextPassword"
+                app:layout_constraintStart_toStartOf="@+id/TextPassword"
+                app:layout_constraintTop_toBottomOf="@+id/TextPassword" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/GoogleSignIn"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="35sp"
+                android:layout_marginBottom="22sp"
+                android:background="@drawable/google_icon"
+                android:elevation="100dp"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+            <!--                android:textColor="@color/black"-->
+            <!--                android:backgroundTint="@color/white"-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
