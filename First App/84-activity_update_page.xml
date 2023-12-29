@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#45000000"
+    tools:context=".updatePage">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/update_bg"
+        android:elevation="10dp"
+        android:padding="9dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            android:textColorHint="#A59E9E">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updatedUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="New Email Address"
+                android:textColor="@color/black"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#A59E9E"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updatedPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter new password"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/updatedBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:text="Update"
+            android:fontFamily="@font/alatsi"
+            android:layout_marginHorizontal="4dp"
+            android:textColor="#DAFFFFFF"
+            android:textSize="20sp"
+            android:backgroundTint="@color/black_overlay"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
