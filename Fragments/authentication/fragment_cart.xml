@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.CartFragment">
+
+    <include
+        android:id="@+id/inc_cart"
+        layout="@layout/tab_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMyCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_cart"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:layout_above="@id/layoutRoot"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutRoot"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/ic_bg_round_green_btn"
+            android:layout_marginHorizontal="18dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mBtnCart"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="67dp"
+                android:text="Go To Checkout"
+                android:textSize="18sp"
+                android:layout_margin="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:background="#FF1AAF51"
+                android:gravity="center"
+                android:text="$12.99"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:fontFamily="@font/open_sans_semibold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
