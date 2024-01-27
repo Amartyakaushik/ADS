@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".BottomNavigation.BottomNavBar">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LPU Live"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="22sp" />
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:src="@drawable/search"-->
+<!--            android:backgroundTint="@color/orange"/>-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/search"
+            android:layout_gravity="end|center_vertical"/>
+        <!--        <androidx.appcompat.widget.SearchView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_weight="0"-->
+<!--            android:layout_gravity="right"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sms"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="25dp"
+        android:elevation="20dp"
+        app:srcCompat="@drawable/sms" />
+
+    <me.ertugrul.lib.SuperBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        app:sbb_menu="@menu/tabs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.995"
+        app:sbb_iconSize="42sp"
+        app:sbb_textSize="17sp"
+        app:sbb_backgroundColor="@color/white"
+        app:sbb_activeColor="@color/orange"
+        app:sbb_passiveColor="#6E6E6E"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
