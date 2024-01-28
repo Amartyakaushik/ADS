@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/white"
-    tools:context=".BottomNavigation.BottomNavBar">
+    tools:context=".BottomNavigation.BottomNav_Bar">
 
     <FrameLayout
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/orange"
@@ -49,6 +50,17 @@
 <!--            app:layout_constraintTop_toTopOf="parent" />-->
     </FrameLayout>
 
+    <FrameLayout
+        android:id="@+id/fragment_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/header_title"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </FrameLayout>
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/sms"
         android:layout_width="60dp"
@@ -60,22 +72,36 @@
         android:elevation="20dp"
         app:srcCompat="@drawable/sms" />
 
-    <me.ertugrul.lib.SuperBottomBar
+<!--    <me.ertugrul.lib.SuperBottomBar-->
+<!--        android:id="@+id/bottomBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="72dp"-->
+<!--        app:sbb_menu="@menu/tabs"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.995"-->
+<!--        app:sbb_iconSize="42sp"-->
+<!--        app:sbb_textSize="17sp"-->
+<!--        app:sbb_initialActiveItem="0"-->
+<!--        app:sbb_backgroundColor="@color/white"-->
+<!--        app:sbb_activeColor="@color/orange"-->
+<!--        app:sbb_passiveColor="#6E6E6E"-->
+<!--        />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        app:sbb_menu="@menu/tabs"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:itemIconSize="40dp"
+        app:itemTextColor="@color/dark_gray"
+        app:itemIconTint="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.995"
-        app:sbb_iconSize="42sp"
-        app:sbb_textSize="17sp"
-        app:sbb_backgroundColor="@color/white"
-        app:sbb_activeColor="@color/orange"
-        app:sbb_passiveColor="#6E6E6E"
-        />
+        app:menu="@menu/tabs"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
