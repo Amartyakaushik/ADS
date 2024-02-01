@@ -21,9 +21,21 @@ class AppLevelSharedPreferece : AppCompatActivity() {
 
 //        lecture 105
 //        Reading non premitive data
-        val user=Gson().fromJson(editor.getString("USER_DATA",null),User::class.java)
-        binding.email.setText(user.email)
-        binding.pass.setText(user.Password)
+//        val user=Gson().fromJson(editor.getString("USER_DATA",null),User::class.java)
+//        binding.email.setText(user.email)
+//        binding.pass.setText(user.Password)
+
+//        CHECK IF THE USER DATA IS NOT NULL WHILE READING IT FROM "User" OBJECT ...
+        val userDataString = editor.getString("USER_DATA", null)
+        if (userDataString != null) {
+            val user = Gson().fromJson(userDataString, User::class.java)
+            // Now you can safely use the user object
+            binding.email.setText(user.email)
+            binding.pass.setText(user.Password)
+        } else {
+            // Handle the case when USER_DATA is null
+        }
+
 
         binding.logInShared.setOnClickListener {
             val editor=getSharedPreferences("MY_SETTING", MODE_PRIVATE).edit()
