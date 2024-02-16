@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Select_Location"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bg_background_auth"
+            android:scaleType="fitXY"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_left"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="10dp"
+            android:padding="14dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_location"
+            android:layout_gravity="center|bottom"/>
+
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:text="Select Your Location"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/open_sans" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch on your location to stay in tune\n with what's happening in you area"
+        android:textSize="14sp"
+        android:textColor="@color/label_color"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
